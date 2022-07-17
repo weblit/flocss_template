@@ -2,36 +2,37 @@
 ```bash
 assets
 ├── foundation
-│   ├── _base.scss
-│   ├── _color.scss
-│   ├── _font.scss
-│   ├── _function.scss
-│   ├── _mixin.scss
-│   ├── _reset.scss
-│   └── _variables.scss
+│   ├── _base.scss
+│   ├── _color.scss
+│   ├── _font.scss
+│   ├── _function.scss
+│   ├── _mixin.scss
+│   ├── _reset.scss
+│   └── _variables.scss
 ├── layout
-│   ├── _footer.scss
-│   ├── _header.scss
-│   └── _main.scss
-└── obejct
-    ├── component
-    │   └── _button.scss
-    ├── project
-    │   └── _index.scss
-    ├── utility
-    └── _utility.scss
+│   ├── _footer.scss
+│   ├── _header.scss
+│   └── _main.scss
+├── obejct
+│   ├── _utility.scss
+│   ├── component
+│   │   └── _button.scss
+│   ├── project
+│   │   └── _index.scss
+│   └── utility
+└── style.scss
 
-6 directories, 13 files
+6 directories, 14 files
 ```
 
 # ディレクトリ / ファイル説明
-- style.scss  
+## 1. style.scss  
 変数をまとめた`/foundation`を最初に読み込み  
 `/layout`, `/component`, `/project`, `/utility`の順番で読み込む  
   ```scss
-  // ===============
+  // ==============================
   // foundation
-  // ===============
+  // ==============================
   @use "foundation/_font";
   @use "foundation/_color";
   @use "foundation/_variable";
@@ -46,30 +47,30 @@ assets
   // 3. _mixin
   // 4. _resetで全体のスタイルをリセットしてからベースである_baseを読み込む
 
-  // ===============
+  // ==============================
   // layout
-  // ===============
+  // ==============================
   @use 'layout/**';
 
-  // ===============
+  // ==============================
   // component
-  // ===============
+  // ==============================
   @use 'component/**';
 
-  // ===============
+  // ==============================
   // project
-  // ===============
+  // ==============================
   @use 'project/**';
 
-  // ===============
+  // ==============================
   // utility
-  // ===============
-  @use 'utility/**';
+  // ==============================
+@use 'utility/**';
 
   // ワイルドカード(**)を使用してディレクトリ配下の全ファイルを指定
   ```
 
-- foundation  
+## 2. foundation  
   - _base.scss  
   サイト全体のベースとなるスタイルと、`_reset.scss`でリセットしきれなかったスタイルを記述
 
@@ -94,7 +95,7 @@ assets
   - _variables.scss  
   色以外で変数として管理したい値を定義  
 
-- layout  
+## 3. layout  
 サイトの大枠となる要素のスタイルを記述  
 ファイル名はブロック要素をつける  
 命名規則は`.l-*`  
@@ -104,7 +105,7 @@ assets
   - _main.scss  
   `<body>`直下のサイト全体を囲むラッパー要素の`<div>`や`<main>`とその直下のインナーの`<div>`などのスタイルを管理  
 
-- object  
+## 4. object  
 `/component`, `/project`, `/utility`の3ディレクトリに分けられる
   - component  
   サイト全体を通してどのページのどの部分でも同じ様に使える共通のモジュール定義  
