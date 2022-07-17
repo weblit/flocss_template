@@ -1,4 +1,6 @@
-.
+ディレクトリ構成
+```bash
+assets
 ├── foundation
 │   ├── _base.scss
 │   ├── _color.scss
@@ -20,3 +22,4 @@
     └── utility.scss
 
 6 directories, 13 files
+```
