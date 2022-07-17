@@ -19,7 +19,7 @@ assets
     ├── project
     │   └── _index.scss
     ├── utility
-    └── utility.scss
+    └── _utility.scss
 
 6 directories, 13 files
 ```
