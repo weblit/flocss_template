@@ -142,17 +142,18 @@ assets
   - utility  
   スタイルの微調整に使うクラスを定義  
   命名規則は`.u-[Emmetのプロパティ＋値]`, `.u-[Emmetのプロパティ＋値]-[ブレイクポイント]-[min or max]`  
-    1. Emmetのプロパティ名
-       `margin-top: 10px;` → `mt10`
-       `width: 50%;` → `w50p`
+    1. Emmetのプロパティ  
+       `margin-top: 10px;` → `mt10`  
+       `width: 50%;` → `w50p`  
 
-    2. ブレイクポイント
+    2. ブレイクポイント  
        `foundation/_mixin.scss`に定義したブレイクポイント
     
-    3. min or max
-       `min-width`で指定しているか`max-width`で指定しているかのメディアクエリ
-    ```scss
-    .u-mt10-md-max  // margin-top: 10px;をmdブレイクポイント以下で適用
-    .u-w50p-sm-min  // width: 50%;をsmブレイクポイント以上で適用
-    .u-dn           // display: none;を全画面幅で適用
-    ```
+    3. min or max  
+       `min-width`で指定しているか`max-width`で指定しているかのメディアクエリ  
+    
+      ```scss
+      .u-mt10-md-max  // margin-top: 10px;をmdブレイクポイント以下で適用
+      .u-w50p-sm-min  // width: 50%;をsmブレイクポイント以上で適用
+      .u-dn           // display: none;を全画面幅で適用
+      ```
