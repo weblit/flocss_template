@@ -1,4 +1,4 @@
-ディレクトリ構成
+# ディレクトリ構成
 ```bash
 assets
 ├── foundation
@@ -23,3 +23,15 @@ assets
 
 6 directories, 13 files
 ```
+
+# ディレクトリ説明
+- foundation
+
+- layout
+
+- object
+  - component
+  - layout
+  - object
+
+# クラス命名規則
