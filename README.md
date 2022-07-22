@@ -13,13 +13,13 @@ assets
 │   ├── _footer.scss
 │   ├── _header.scss
 │   └── _main.scss
-├── obejct
-│   ├── _utility.scss
+├── object
 │   ├── component
 │   │   └── _button.scss
 │   ├── project
 │   │   └── _index.scss
 │   └── utility
+│       └── _utility.scss
 └── style.scss
 
 6 directories, 14 files
@@ -50,24 +50,23 @@ assets
   // ==============================
   // layout
   // ==============================
-  @use 'layout/**';
+  @use 'layout/ファイル名';
 
   // ==============================
   // component
   // ==============================
-  @use 'component/**';
+  @use 'component/ファイル名';
 
   // ==============================
   // project
   // ==============================
-  @use 'project/**';
+  @use 'project/ファイル名';
 
   // ==============================
   // utility
   // ==============================
-@use 'utility/**';
+  @use 'utility/ファイル名';
 
-  // ワイルドカード(**)を使用してディレクトリ配下の全ファイルを指定
   ```
 
 ## 2. foundation  

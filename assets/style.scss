@@ -3,7 +3,7 @@
 // ==============================
 @use "foundation/_font";
 @use "foundation/_color";
-@use "foundation/_variable";
+@use "foundation/_variables";
 @use "foundation/_function";
 @use "foundation/_mixin";
 @use "foundation/_reset";
@@ -12,19 +12,21 @@
 // ==============================
 // layout
 // ==============================
-@use 'layout/**';
+@use 'layout/_header';
+@use 'layout/_main';
+@use 'layout/_footer';
 
 // ==============================
 // component
 // ==============================
-@use 'component/**';
+@use 'component/_button';
 
 // ==============================
 // project
 // ==============================
-@use 'project/**';
+@use 'project/_index';
 
 // ==============================
 // utility
 // ==============================
-@use 'utility/**';
+@use 'utility/_utility';

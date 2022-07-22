@@ -1,11 +1,42 @@
-$breakpoint: (
+$BREAKPOINT: (
     sp: "screen and (max-width: 767px)",
     tab: "screen and (min-width: 768px)",
     pc: "screen and (min-width: 1025px)",
 );
 
+// メディアクエリ
 @mixin mq($bp) {
-    @media #{map-get($breakpoint, $bp)} {
+    @media #{map-get($BREAKPOINT, $bp)} {
         @content;
     }
+}
+
+// ヘッダースタイル
+@mixin header {
+    width: 100%;
+    position: fixed;
+}
+
+// flex センター揃え
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// position センター揃え
+@mixin position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// background-image
+$PATH_IMG: "/assets/img/";
+
+@mixin background-image($fileName) {
+    background-image: url($PATH_IMG + $fileName);
+    background-position: center;
+    background-size: cover;
 }
