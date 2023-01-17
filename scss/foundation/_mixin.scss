@@ -31,12 +31,3 @@ $BREAKPOINT: (
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-// background-image
-$PATH_IMG: "/assets/img/";
-
-@mixin background-image($fileName) {
-    background-image: url($PATH_IMG + $fileName);
-    background-position: center;
-    background-size: cover;
-}
