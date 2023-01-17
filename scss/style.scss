@@ -19,14 +19,14 @@
 // ==============================
 // component
 // ==============================
-@use 'component/_button';
+@use 'object/component/_button';
 
 // ==============================
 // project
 // ==============================
-@use 'project/_index';
+@use 'object/project/_index';
 
 // ==============================
 // utility
 // ==============================
-@use 'utility/_utility';
+@use 'object/utility/_utility';
